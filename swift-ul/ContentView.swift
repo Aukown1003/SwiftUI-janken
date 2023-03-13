@@ -6,21 +6,24 @@
 //
 
 import SwiftUI
-
+//struct = 構造体　次に変数名が来る
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        //この範囲がクロージャ
+        //画像を指定
+        Image("gu")
+            //リサイズ
+            .resizable()
+            //アスペクト比維持
+            .scaledToFit()
+        
+        
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
